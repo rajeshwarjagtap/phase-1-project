@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="product"method ="get">
+<form action="add"method ="get">
 <h1>Enter the product detail</h1><br>
 
 Enter the productID<input type ="text" name="proid">
