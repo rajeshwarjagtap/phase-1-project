@@ -8,12 +8,12 @@
 </head>
 <body>
 <form action="product"method ="get">
-<h1>Enter the product name to show detail</h1><br>
-<h4>notebook</h4>
-<h4>pen</h4>
-<h4>paper</h4>
-<h4>colour</h4>
-<input type ="text" name="proname">
+<h1>Enter the product detail</h1><br>
+
+Enter the productID<input type ="text" name="proid">
+Enter the product Name<input type ="text" name="proname">
+Enter the product price<input type ="text" name="proprice">
+Enter the product Avaliabilty<input type ="text" name="proavli">
 <input type="submit" value="save">
 
 </form>

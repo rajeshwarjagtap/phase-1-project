@@ -31,27 +31,21 @@ public class product extends HttpServlet {
 		try {
 		//Call Connection Method
 			Connection con=DBConnection.getMyConnection();
-           String str="select * from product where proName='"+name+"'";
           
 
 			//to execute query create object of Statement
 			java.sql.Statement  ps= con.createStatement();
 			//get ResultSet
 			
-		
-		ResultSet ans1 =((java.sql.Statement) ps).executeQuery(str);
+		int proid=Integer.parseInt(request.getParameter("proid"));
+		String s=request.getParameter("proname");
+		String p=request.getParameter("proprice");
+		String q=request.getParameter("proavli");
 			PrintWriter out=response.getWriter();
-			out.println("<table border=2>");
-			out.println("<tr><th>product Number</th></th><th>product Name</th><th>price</th><th>Avaliablity</th></tr>");
-			while(ans1.next()) {
-				out.println("<tr>");
-				out.print("<td>"+ans1.getInt("proId")+"</td>");
-				out.print("<td>"+ans1.getString("proName")+"</td>");
-				out.print("<td>"+ans1.getString("proPrice")+"</td>");
-				out.print("<td>"+ans1.getString("proAvaliable")+"</td>");
-				out.println("</tr>");
-			}
-			out.println("</table>");
+			out.println("product id "+proid);
+			out.println("product name "+ s);
+			out.println("product price "+p);
+			out.println("product avaliablity"+q);
 			con.close();
 			
 			
